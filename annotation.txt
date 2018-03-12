@@ -1,0 +1,15 @@
+ Usuário efetua login no site
+ Adiciona uma nova Operação
+ Passado um tempo retorna e informa dados sobre o termino da operação
+ O sistema deve calcular os ganhos/perdas da operação
+
+ O que uma OPERAÇÃO possui?
+
+ * Par - Pair
+ * Data Início - InitialDate
+ * Montante - Amount
+ * Entrada - EntryPoint
+ * Saída - ExitPoint
+ * Resultado Percentual - PercentageResult
+ * Gerenciamento de Risco - RiskManagement
+ * Retorno Financeiro - FinancialFeedback
