@@ -1,5 +1,5 @@
- Usuário efetua login no site
- Adiciona uma nova Operação
+ USUÁRIO efetua login no site
+ Adiciona uma nova OPERAÇÃO
  Passado um tempo retorna e informa dados sobre o termino da operação
  O sistema deve calcular os ganhos/perdas da operação
 
@@ -7,6 +7,7 @@
 
  * Par - Pair
  * Data Início - InitialDate
+ * Data Final - FinalDate
  * Montante - Amount
  * Entrada - EntryPoint
  * Saída - ExitPoint
