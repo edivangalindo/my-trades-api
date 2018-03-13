@@ -57,8 +57,9 @@ namespace MyTrades.Domain.Entities
             // Fecha uma operação
             Status = EStatus.Closed;
 
+            // Calculate gains or losses
             var balance = new Balance();
-            balance.updateBalance(Amount.CryptoAmount);
+            balance.updateBalance(calculateFinancialFeedback(Amount.CryptoAmount));
         }
         
         // Calcular ganhos/perdas

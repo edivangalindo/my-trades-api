@@ -6,7 +6,14 @@ namespace MyTrades.Domain.Entities
     {
         public Balance()
         {
+
         }
+
+        public Balance(decimal initialInvestment)
+        {
+            CurrentBalance = initialInvestment;
+        }
+
         public decimal InitialInvestment { get; private set; }
         public decimal CurrentBalance { get; private set; }
 
@@ -20,5 +27,9 @@ namespace MyTrades.Domain.Entities
                 CurrentBalance -= amount;
         }
 
+        public override string ToString()
+        {
+            return CurrentBalance.ToString();
+        }
     }
 }
