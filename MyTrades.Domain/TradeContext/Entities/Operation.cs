@@ -11,7 +11,7 @@ namespace MyTrades.Domain.Entities
             Pair pair, 
             DateTime initialDate,
             DateTime finalDate,
-            IList<Amount> amount,
+            Amount amount,
             decimal entryPoint,
             decimal exitPoint,
             double percentageResult,
@@ -35,7 +35,7 @@ namespace MyTrades.Domain.Entities
         public Pair Pair { get; private set; }
         public DateTime InitialDate { get; private set; }
         public DateTime FinalDate { get; private set; }
-        public IList<Amount> Amount { get; private set; }
+        public Amount Amount { get; private set; }
         public decimal EntryPoint { get; private set; }
         public decimal ExitPoint { get; private set; }
         public double PercentageResult { get; private set; }
@@ -56,12 +56,15 @@ namespace MyTrades.Domain.Entities
         {
             // Fecha uma operação
             Status = EStatus.Closed;
+
+            var balance = new Balance();
+            balance.updateBalance(Amount.CryptoAmount);
         }
         
         // Calcular ganhos/perdas
-        public void calculateGainOrLosses()
+        public decimal calculateFinancialFeedback(decimal cryptoAmount)
         {
-
+            return (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
         }
     }
 }
