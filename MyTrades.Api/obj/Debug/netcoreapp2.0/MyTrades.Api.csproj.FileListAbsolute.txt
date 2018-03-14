@@ -9,3 +9,14 @@ C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.AssemblyInfoI
 C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.AssemblyInfo.cs
 C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.dll
 C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.pdb
+C:\Study\my-trades-api\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.deps.json
+C:\Study\my-trades-api\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.runtimeconfig.json
+C:\Study\my-trades-api\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.runtimeconfig.dev.json
+C:\Study\my-trades-api\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.dll
+C:\Study\my-trades-api\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.pdb
+C:\Study\my-trades-api\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.csprojResolveAssemblyReference.cache
+C:\Study\my-trades-api\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.csproj.CoreCompileInputs.cache
+C:\Study\my-trades-api\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.AssemblyInfoInputs.cache
+C:\Study\my-trades-api\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.AssemblyInfo.cs
+C:\Study\my-trades-api\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.dll
+C:\Study\my-trades-api\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.pdb

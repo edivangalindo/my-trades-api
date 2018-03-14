@@ -1,4 +1,3 @@
-using FluentValidator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyTrades.Domain.Enum;
 using MyTrades.Domain.TradeContext.Entities;
@@ -7,7 +6,7 @@ using MyTrades.Domain.ValueObjects;
 namespace MyTrades.Tests
 {
     [TestClass]
-    public class UnitTest1 : Notifiable
+    public class UnitTest1
     {
         [TestMethod]
         public void TestMethod1()

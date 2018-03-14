@@ -1,10 +1,9 @@
 using System;
-using FluentValidator;
 using MyTrades.Domain.Enum;
 
 namespace MyTrades.Domain.ValueObjects
 {
-    public class Amount : Notifiable
+    public class Amount
     {
         public Amount (decimal cryptoAmount)
         {

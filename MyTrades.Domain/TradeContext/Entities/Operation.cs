@@ -1,4 +1,4 @@
-using FluentValidator;
+using Flunt.Notifications;
 using MyTrades.Domain.Enum;
 using MyTrades.Domain.ValueObjects;
 using System;

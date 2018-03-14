@@ -2,16 +2,16 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "FluentValidator/2.0.4": {
+      "Flunt/1.0.2": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
-          "lib/netstandard1.3/FluentValidator.dll": {}
+          "lib/netstandard1.3/Flunt.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/FluentValidator.dll": {}
+          "lib/netstandard1.3/Flunt.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -41,14 +41,14 @@
     }
   },
   "libraries": {
-    "FluentValidator/2.0.4": {
-      "sha512": "px1HWHYBD20PuCUgz/mEl/QcBsikW5nbdtR5whllwMIyJ4FJs03nGXe5ocHEre/x3CX72hJBnX7bteqkZwlcfA==",
+    "Flunt/1.0.2": {
+      "sha512": "HtQBErf6cJewdP7LzLJEyehePdPKP4ieYoQP8DpiXB6qs1TeuHVF38Bw8TZzz9t7r2j+SWFRoMsU5oJvzSOeBg==",
       "type": "package",
-      "path": "fluentvalidator/2.0.4",
+      "path": "flunt/1.0.2",
       "files": [
-        "fluentvalidator.2.0.4.nupkg.sha512",
-        "fluentvalidator.nuspec",
-        "lib/netstandard1.3/FluentValidator.dll"
+        "flunt.1.0.2.nupkg.sha512",
+        "flunt.nuspec",
+        "lib/netstandard1.3/Flunt.dll"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
@@ -195,35 +195,33 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "FluentValidator >= 2.0.4",
+      "Flunt >= 1.0.2",
       "NETStandard.Library >= 2.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Edivan\\.nuget\\packages\\": {},
+    "C:\\Users\\edivan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\my-trades\\MyTrades.Domain\\MyTrades.Domain.csproj",
+      "projectUniqueName": "C:\\Study\\my-trades-api\\MyTrades.Domain\\MyTrades.Domain.csproj",
       "projectName": "MyTrades.Domain",
-      "projectPath": "C:\\dev\\my-trades\\MyTrades.Domain\\MyTrades.Domain.csproj",
-      "packagesPath": "C:\\Users\\Edivan\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\my-trades\\MyTrades.Domain\\obj\\",
+      "projectPath": "C:\\Study\\my-trades-api\\MyTrades.Domain\\MyTrades.Domain.csproj",
+      "packagesPath": "C:\\Users\\edivan\\.nuget\\packages\\",
+      "outputPath": "C:\\Study\\my-trades-api\\MyTrades.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Edivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\edivan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -240,9 +238,9 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "FluentValidator": {
+          "Flunt": {
             "target": "Package",
-            "version": "[2.0.4, )"
+            "version": "[1.0.2, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",

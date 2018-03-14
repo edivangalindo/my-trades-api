@@ -7,3 +7,12 @@ C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.Assemb
 C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.AssemblyInfo.cs
 C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.dll
 C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.pdb
+C:\Study\my-trades-api\MyTrades.Domain\bin\Debug\netstandard2.0\MyTrades.Domain.deps.json
+C:\Study\my-trades-api\MyTrades.Domain\bin\Debug\netstandard2.0\MyTrades.Domain.dll
+C:\Study\my-trades-api\MyTrades.Domain\bin\Debug\netstandard2.0\MyTrades.Domain.pdb
+C:\Study\my-trades-api\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.csprojResolveAssemblyReference.cache
+C:\Study\my-trades-api\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.csproj.CoreCompileInputs.cache
+C:\Study\my-trades-api\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.AssemblyInfoInputs.cache
+C:\Study\my-trades-api\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.AssemblyInfo.cs
+C:\Study\my-trades-api\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.dll
+C:\Study\my-trades-api\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.pdb

@@ -1,9 +1,8 @@
 using System;
-using FluentValidator;
 
 namespace MyTrades.Domain.TradeContext.Entities
 {
-    public class Balance : Notifiable
+    public class Balance
     {
         public Balance()
         {
