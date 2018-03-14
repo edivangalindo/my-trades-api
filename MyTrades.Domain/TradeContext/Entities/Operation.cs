@@ -57,7 +57,7 @@ namespace MyTrades.Domain.TradeContext.Entities
             if (Amount.CryptoAmount <= 0)
                 AddNotification("InvalidAmount", "O montante precisa ser maior que 0.");
 
-            if(RiskManagement > 100 || RiskManagement < 0)
+            if (RiskManagement > 100 || RiskManagement < 0)
                 AddNotification("InvalidRisk", "O G.R. deve ser maior que 0 e menor que 100.");
         }
         public void closeOperation(decimal exitPoint)
@@ -73,6 +73,10 @@ namespace MyTrades.Domain.TradeContext.Entities
             // Atualizar o saldo
             var balance = new Balance();
             balance.updateBalance(FinancialFeedback);
+
+            // Adicionar validações
+            if (ExitPoint <= 0)
+                AddNotification("InvalidExitPoint", "O ponto de saída não pode ser igual ou inferior a 0.");
         }
 
         // Edit operation
