@@ -15,7 +15,7 @@ namespace MyTrades.Tests
             var pair = new Pair(EAssets.USD, EAssets.BTC);
             var operation = new Operation();
 
-            operation.openOperation(
+            operation.OpenOperation(
                 pair,
                 EType.Long,
                 12,
@@ -29,7 +29,7 @@ namespace MyTrades.Tests
 
             var validate = operation.Valid;
 
-            operation.closeOperation(10800);
+            // operation.closeOperation(10800);
 
 // O que um teste deve fazer...
             // instanciar amount

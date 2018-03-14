@@ -13,11 +13,11 @@ namespace MyTrades.Domain.ValueObjects
         public decimal DollarAmount { get; private set; }
         public decimal RealAmount { get; private set; }
 
-        public void calculateDollarAmount()
+        public void CalculateDollarAmount()
         {
             // CryptoAmount X Cotação da moeda
         }
-        public void calculateRealAmount()
+        public void CalculateRealAmount()
         {
             // CryptoAmount X Cotação da moeda X Cotação do dólar
         }

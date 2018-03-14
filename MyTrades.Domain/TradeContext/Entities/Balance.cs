@@ -17,7 +17,7 @@ namespace MyTrades.Domain.TradeContext.Entities
         public decimal InitialInvestment { get; private set; }
         public decimal CurrentBalance { get; private set; }
 
-        public void updateBalance(decimal amount)
+        public void UpdateBalance(decimal amount)
         {
             bool isProfit = amount > 0 ? true : false;
             

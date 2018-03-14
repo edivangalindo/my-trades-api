@@ -12,7 +12,7 @@ namespace MyTrades.Domain.TradeContext.Entities
             InitialDate = DateTime.Now;
         }
 
-        public string NumberOperation { get; private set; }
+        public string IdOperation { get; private set; }
         public DateTime InitialDate { get; private set; }
         public Pair Pair { get; private set; }
         public EType Type { get; private set; }
@@ -29,7 +29,7 @@ namespace MyTrades.Domain.TradeContext.Entities
         public decimal FinancialFeedback { get; private set; }
         public EStatus Status { get; private set; }
 
-        public void openOperation(
+        public void OpenOperation(
             Pair pair,
             EType type,
             double riskManagement,
@@ -41,7 +41,7 @@ namespace MyTrades.Domain.TradeContext.Entities
             decimal partial = 0
         )
         {
-            NumberOperation = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8).ToUpper();
+            IdOperation = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8).ToUpper();
             Status = EStatus.Open;
 
             Pair = pair;
@@ -60,30 +60,40 @@ namespace MyTrades.Domain.TradeContext.Entities
             if (RiskManagement > 100 || RiskManagement < 0)
                 AddNotification("InvalidRisk", "O G.R. deve ser maior que 0 e menor que 100.");
         }
-        public void closeOperation(decimal exitPoint)
+        public void CloseOperation(string idOperation, decimal exitPoint)
         {
+            IdOperation = idOperation;
+
+            // Recuperar operação do banco
+
             Status = EStatus.Closed;
             FinalDate = DateTime.Now;
 
             ExitPoint = exitPoint;
 
-            FinancialFeedback = calculateFinancialFeedback(Amount.CryptoAmount);
-            PercentageResult = calculatePercentualResult(EntryPoint, ExitPoint);
+            FinancialFeedback = CalculateFinancialFeedback(Amount.CryptoAmount);
+            PercentageResult = CalculatePercentualResult(EntryPoint, ExitPoint);
 
             // Atualizar o saldo
             var balance = new Balance();
-            balance.updateBalance(FinancialFeedback);
+            balance.UpdateBalance(FinancialFeedback);
 
             // Adicionar validações
             if (ExitPoint <= 0)
-                AddNotification("InvalidExitPoint", "O ponto de saída não pode ser igual ou inferior a 0.");
+                AddNotification("InvalidExitPoint", "O ponto de saída não pode ser inferior ou igual a 0.");
         }
 
         // Edit operation
+        public void UpdateOperation(string idOperation)
+        {
+            IdOperation = idOperation;
+
+            // Recuperar operação do banco
+        }
 
         // Delete operation
 
-        public decimal calculateFinancialFeedback(decimal cryptoAmount) => (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
-        public double calculatePercentualResult(decimal entryPoint, decimal exitPoint) => Convert.ToDouble((exitPoint - entryPoint) / entryPoint);
+        public decimal CalculateFinancialFeedback(decimal cryptoAmount) => (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
+        public double CalculatePercentualResult(decimal entryPoint, decimal exitPoint) => Convert.ToDouble((exitPoint - entryPoint) / entryPoint);
     }
 }
