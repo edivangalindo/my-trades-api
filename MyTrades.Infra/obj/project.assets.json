@@ -177,28 +177,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\edivan\\.nuget\\packages\\": {},
+    "C:\\Users\\Edivan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Study\\my-trades-api\\MyTrades.Infra\\MyTrades.Infra.csproj",
+      "projectUniqueName": "C:\\dev\\my-trades\\MyTrades.Infra\\MyTrades.Infra.csproj",
       "projectName": "MyTrades.Infra",
-      "projectPath": "C:\\Study\\my-trades-api\\MyTrades.Infra\\MyTrades.Infra.csproj",
-      "packagesPath": "C:\\Users\\edivan\\.nuget\\packages\\",
-      "outputPath": "C:\\Study\\my-trades-api\\MyTrades.Infra\\obj\\",
+      "projectPath": "C:\\dev\\my-trades\\MyTrades.Infra\\MyTrades.Infra.csproj",
+      "packagesPath": "C:\\Users\\Edivan\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\my-trades\\MyTrades.Infra\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\edivan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Edivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

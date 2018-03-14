@@ -1611,6 +1611,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "MyTrades.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MyTrades.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyTrades.Domain.dll": {}
+        }
       }
     }
   },
@@ -5683,6 +5693,11 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "MyTrades.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MyTrades.Domain/MyTrades.Domain.csproj",
+      "msbuildProject": "../MyTrades.Domain/MyTrades.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5690,37 +5705,44 @@
       "MSTest.TestAdapter >= 1.2.0",
       "MSTest.TestFramework >= 1.2.0",
       "Microsoft.NET.Test.Sdk >= 15.5.0",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "MyTrades.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\edivan\\.nuget\\packages\\": {},
+    "C:\\Users\\Edivan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Study\\my-trades-api\\MyTrades.Tests\\MyTrades.Tests.csproj",
+      "projectUniqueName": "C:\\dev\\my-trades\\MyTrades.Tests\\MyTrades.Tests.csproj",
       "projectName": "MyTrades.Tests",
-      "projectPath": "C:\\Study\\my-trades-api\\MyTrades.Tests\\MyTrades.Tests.csproj",
-      "packagesPath": "C:\\Users\\edivan\\.nuget\\packages\\",
-      "outputPath": "C:\\Study\\my-trades-api\\MyTrades.Tests\\obj\\",
+      "projectPath": "C:\\dev\\my-trades\\MyTrades.Tests\\MyTrades.Tests.csproj",
+      "packagesPath": "C:\\Users\\Edivan\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\my-trades\\MyTrades.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\edivan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Edivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\dev\\my-trades\\MyTrades.Domain\\MyTrades.Domain.csproj": {
+              "projectPath": "C:\\dev\\my-trades\\MyTrades.Domain\\MyTrades.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5745,7 +5767,6 @@
             "version": "[15.5.0, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true

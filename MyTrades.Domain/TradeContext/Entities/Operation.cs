@@ -3,69 +3,72 @@ using System.Collections.Generic;
 using MyTrades.Domain.Enum;
 using MyTrades.Domain.ValueObjects;
 
-namespace MyTrades.Domain.Entities
+namespace MyTrades.Domain.TradeContext.Entities
 {
     public class Operation
     {
-        public Operation(
-            Pair pair, 
-            DateTime initialDate,
-            DateTime finalDate,
-            Amount amount,
-            decimal entryPoint,
-            decimal exitPoint,
-            double percentageResult,
-            double riskMAnagement,
-            decimal financialFeedback,
-            EStatus status
-        )
+        public Operation()
         {
-            Pair = pair;
-            InitialDate = initialDate;
-            FinalDate = finalDate;
-            Amount = amount;
-            EntryPoint = entryPoint;
-            ExitPoint = exitPoint;
-            PercentageResult = percentageResult;
-            RiskManagement = riskMAnagement;
-            FinancialFeedback = financialFeedback;
-            Status = status;
+            InitialDate = DateTime.Now;
         }
-        public string ID { get; private set; }
-        public Pair Pair { get; private set; }
+
+        public string NumberOperation { get; private set; }
         public DateTime InitialDate { get; private set; }
-        public DateTime FinalDate { get; private set; }
-        public Amount Amount { get; private set; }
+        public Pair Pair { get; private set; }
+        public EType Type { get; private set; }
         public decimal EntryPoint { get; private set; }
+        public decimal Partial { get; private set; }
+        public decimal Target { get; private set; }
         public decimal ExitPoint { get; private set; }
-        public double PercentageResult { get; private set; }
+        public decimal Stop { get; private set; }
         public double RiskManagement { get; private set; }
+        public EModality Modality { get; private set; }
+        public Amount Amount { get; private set; }
+        public DateTime FinalDate { get; private set; }
+        public double PercentageResult { get; private set; }
         public decimal FinancialFeedback { get; private set; }
         public EStatus Status { get; private set; }
 
-        public void startOperation()
+        public void startOperation(
+            Pair pair,
+            EType type,
+            double riskManagement,
+            EModality modality,
+            Amount amount,
+            decimal entryPoint,
+            decimal target,
+            decimal stop,
+            decimal partial = 0
+        )
         {
-            // Gera número da operação
-            ID = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8).ToUpper();
-
-            // Abre uma operação
+            NumberOperation = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8).ToUpper();
             Status = EStatus.Open;
-            // Validar
-        }
-        public void finishOperation()
-        {
-            // Fecha uma operação
-            Status = EStatus.Closed;
 
-            // Calculate gains or losses
-            var balance = new Balance();
-            balance.updateBalance(calculateFinancialFeedback(Amount.CryptoAmount));
+            Pair = pair;
+            Type = type;
+            RiskManagement = riskManagement;
+            Modality = modality;
+            Amount = amount;
+            EntryPoint = entryPoint;
+            Target = target;
+            Stop = stop;
+            Partial = partial;
         }
-        
-        // Calcular ganhos/perdas
-        public decimal calculateFinancialFeedback(decimal cryptoAmount)
+        public void finishOperation(decimal exitPoint)
         {
-            return (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
+            Status = EStatus.Closed;
+            FinalDate = DateTime.Now;
+
+            ExitPoint = exitPoint;
+
+            FinancialFeedback = calculateFinancialFeedback(Amount.CryptoAmount);
+            PercentageResult = calculatePercentualResult(EntryPoint, ExitPoint);
+
+            // Atualizar o saldo
+            var balance = new Balance();
+            balance.updateBalance(FinancialFeedback);
         }
+        public decimal calculateFinancialFeedback(decimal cryptoAmount) => (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
+        public double calculatePercentualResult(decimal entryPoint, decimal exitPoint) => Convert.ToDouble((exitPoint - entryPoint) / entryPoint);
     }
 }

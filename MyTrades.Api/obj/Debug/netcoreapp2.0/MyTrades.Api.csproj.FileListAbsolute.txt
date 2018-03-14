@@ -1,0 +1,11 @@
+C:\dev\my-trades\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.deps.json
+C:\dev\my-trades\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.runtimeconfig.json
+C:\dev\my-trades\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.runtimeconfig.dev.json
+C:\dev\my-trades\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.dll
+C:\dev\my-trades\MyTrades.Api\bin\Debug\netcoreapp2.0\MyTrades.Api.pdb
+C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.csprojResolveAssemblyReference.cache
+C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.csproj.CoreCompileInputs.cache
+C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.AssemblyInfoInputs.cache
+C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.AssemblyInfo.cs
+C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.dll
+C:\dev\my-trades\MyTrades.Api\obj\Debug\netcoreapp2.0\MyTrades.Api.pdb

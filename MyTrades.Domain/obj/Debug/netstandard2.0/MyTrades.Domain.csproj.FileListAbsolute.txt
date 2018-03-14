@@ -1,0 +1,9 @@
+C:\dev\my-trades\MyTrades.Domain\bin\Debug\netstandard2.0\MyTrades.Domain.deps.json
+C:\dev\my-trades\MyTrades.Domain\bin\Debug\netstandard2.0\MyTrades.Domain.dll
+C:\dev\my-trades\MyTrades.Domain\bin\Debug\netstandard2.0\MyTrades.Domain.pdb
+C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.csprojResolveAssemblyReference.cache
+C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.csproj.CoreCompileInputs.cache
+C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.AssemblyInfoInputs.cache
+C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.AssemblyInfo.cs
+C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.dll
+C:\dev\my-trades\MyTrades.Domain\obj\Debug\netstandard2.0\MyTrades.Domain.pdb
