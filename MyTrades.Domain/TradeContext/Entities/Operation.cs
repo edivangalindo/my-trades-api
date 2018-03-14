@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
+using FluentValidator;
 using MyTrades.Domain.Enum;
 using MyTrades.Domain.ValueObjects;
+using System;
 
 namespace MyTrades.Domain.TradeContext.Entities
 {
-    public class Operation
+    public class Operation : Notifiable
     {
         public Operation()
         {
@@ -29,7 +29,7 @@ namespace MyTrades.Domain.TradeContext.Entities
         public decimal FinancialFeedback { get; private set; }
         public EStatus Status { get; private set; }
 
-        public void startOperation(
+        public void openOperation(
             Pair pair,
             EType type,
             double riskManagement,
@@ -53,8 +53,14 @@ namespace MyTrades.Domain.TradeContext.Entities
             Target = target;
             Stop = stop;
             Partial = partial;
+
+            if (Amount.CryptoAmount <= 0)
+                AddNotification("InvalidAmount", "O montante precisa ser maior que 0.");
+
+            if(RiskManagement > 100 || RiskManagement < 0)
+                AddNotification("InvalidRisk", "O G.R. deve ser maior que 0 e menor que 100.");
         }
-        public void finishOperation(decimal exitPoint)
+        public void closeOperation(decimal exitPoint)
         {
             Status = EStatus.Closed;
             FinalDate = DateTime.Now;
@@ -68,6 +74,11 @@ namespace MyTrades.Domain.TradeContext.Entities
             var balance = new Balance();
             balance.updateBalance(FinancialFeedback);
         }
+
+        // Edit operation
+
+        // Delete operation
+
         public decimal calculateFinancialFeedback(decimal cryptoAmount) => (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
         public double calculatePercentualResult(decimal entryPoint, decimal exitPoint) => Convert.ToDouble((exitPoint - entryPoint) / entryPoint);
     }

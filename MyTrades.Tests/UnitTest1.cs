@@ -1,4 +1,4 @@
-using System;
+using FluentValidator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyTrades.Domain.Enum;
 using MyTrades.Domain.TradeContext.Entities;
@@ -7,7 +7,7 @@ using MyTrades.Domain.ValueObjects;
 namespace MyTrades.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest1 : Notifiable
     {
         [TestMethod]
         public void TestMethod1()
@@ -16,10 +16,10 @@ namespace MyTrades.Tests
             var pair = new Pair(EAssets.USD, EAssets.BTC);
             var operation = new Operation();
 
-            operation.startOperation(
+            operation.openOperation(
                 pair,
                 EType.Long,
-                25,
+                12,
                 EModality.DayTrade,
                 amount,
                 9500,
@@ -28,7 +28,9 @@ namespace MyTrades.Tests
                 10400
             );
 
-            operation.finishOperation(10800);
+            var validate = operation.Valid;
+
+            operation.closeOperation(10800);
 
 // O que um teste deve fazer...
             // instanciar amount

@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "c0b2dca7710c832f8e2c4474ab16c2cfaab24f81"
+    "signature": "c732878777301fcc8faed82ccdb6d1f336af2f9d"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "MyTrades.Tests/1.0.0": {
         "dependencies": {
+          "FluentValidator": "2.0.4",
           "MSTest.TestAdapter": "1.2.0",
           "MSTest.TestFramework": "1.2.0",
           "Microsoft.NET.Test.Sdk": "15.5.0",
@@ -15,6 +16,11 @@
         },
         "runtime": {
           "MyTrades.Tests.dll": {}
+        }
+      },
+      "FluentValidator/2.0.4": {
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
         }
       },
       "Microsoft.CodeCoverage/1.0.3": {
@@ -1000,6 +1006,9 @@
         }
       },
       "MyTrades.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidator": "2.0.4"
+        },
         "runtime": {
           "MyTrades.Domain.dll": {}
         }
@@ -1011,6 +1020,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidator/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-px1HWHYBD20PuCUgz/mEl/QcBsikW5nbdtR5whllwMIyJ4FJs03nGXe5ocHEre/x3CX72hJBnX7bteqkZwlcfA==",
+      "path": "fluentvalidator/2.0.4",
+      "hashPath": "fluentvalidator.2.0.4.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/1.0.3": {
       "type": "package",

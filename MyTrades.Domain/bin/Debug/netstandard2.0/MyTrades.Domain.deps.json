@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "2468f8819b4e290b1a8667020137de51bd83af19"
+    "signature": "5335f294dadcd7c0847d667ccb3730f548316e82"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,10 +9,19 @@
     ".NETStandard,Version=v2.0/": {
       "MyTrades.Domain/1.0.0": {
         "dependencies": {
+          "FluentValidator": "2.0.4",
           "NETStandard.Library": "2.0.1"
         },
         "runtime": {
           "MyTrades.Domain.dll": {}
+        }
+      },
+      "FluentValidator/2.0.4": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -28,6 +37,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidator/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-px1HWHYBD20PuCUgz/mEl/QcBsikW5nbdtR5whllwMIyJ4FJs03nGXe5ocHEre/x3CX72hJBnX7bteqkZwlcfA==",
+      "path": "fluentvalidator/2.0.4",
+      "hashPath": "fluentvalidator.2.0.4.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

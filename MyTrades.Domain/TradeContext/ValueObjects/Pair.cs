@@ -1,9 +1,10 @@
 using System;
+using FluentValidator;
 using MyTrades.Domain.Enum;
 
 namespace MyTrades.Domain.ValueObjects
 {
-    public class Pair
+    public class Pair : Notifiable
     {
         public Pair(EAssets pairMother, EAssets pairSon)
         {

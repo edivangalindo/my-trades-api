@@ -1,19 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0"/>
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.0"/>
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.0"/>
+    <PackageReference Include="FluentValidator" Version="2.0.4"/>
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\MyTrades.Domain\MyTrades.Domain.csproj" />
+    <ProjectReference Include="..\MyTrades.Domain\MyTrades.Domain.csproj"/>
   </ItemGroup>
-
 </Project>
