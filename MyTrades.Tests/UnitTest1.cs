@@ -30,23 +30,6 @@ namespace MyTrades.Tests
             var validate = operation.Valid;
 
             // operation.closeOperation(10800);
-
-// O que um teste deve fazer...
-            // instanciar amount
-            // instanciar par
-            // instanciar uma operação
-            // abrir ordem
-                // Pair
-                // Type
-                // Entrada
-                // -- Parcial
-                // Alvo
-                // -- Stop
-                // Risk Management
-                // -- Modality
-            // fechar ordem
-                // calcular calculateFinancialFeedback
-                // calcular calculatePercentualResult
         }
     }
 }

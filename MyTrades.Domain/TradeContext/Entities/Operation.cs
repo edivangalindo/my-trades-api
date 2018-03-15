@@ -41,7 +41,7 @@ namespace MyTrades.Domain.TradeContext.Entities
             decimal partial = 0
         )
         {
-            IdOperation = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8).ToUpper();
+            IdOperation = Guid.NewGuid().ToString();
             Status = EStatus.Open;
 
             Pair = pair;
@@ -92,6 +92,12 @@ namespace MyTrades.Domain.TradeContext.Entities
         }
 
         // Delete operation
+        public void DeleteOperation(string idOperation)
+        {
+            IdOperation = idOperation;
+            
+            // Recuperar operação do banco
+        }
 
         public decimal CalculateFinancialFeedback(decimal cryptoAmount) => (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
         public double CalculatePercentualResult(decimal entryPoint, decimal exitPoint) => Convert.ToDouble((exitPoint - entryPoint) / entryPoint);
