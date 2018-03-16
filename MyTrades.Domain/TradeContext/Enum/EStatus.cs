@@ -1,6 +1,6 @@
 using System;
 
-namespace MyTrades.Domain.TradeContext.Enum
+namespace MyTrades.Domain.Enum
 {
     public enum EStatus
     {

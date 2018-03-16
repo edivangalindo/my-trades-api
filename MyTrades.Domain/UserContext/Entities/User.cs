@@ -1,7 +1,7 @@
 using System;
-using MyTrades.Domain.SharedContext.ValueObjects;
+using MyTrades.Domain.ValueObjects;
 
-namespace MyTrades.Domain.UserContext.Entities
+namespace MyTrades.Domain.Entities
 {
     public class User
     {

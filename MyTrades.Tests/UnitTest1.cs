@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MyTrades.Domain.TradeContext.Enum;
-using MyTrades.Domain.TradeContext.Entities;
-using MyTrades.Domain.TradeContext.ValueObjects;
+using MyTrades.Domain.Enum;
+using MyTrades.Domain.Entities;
+using MyTrades.Domain.ValueObjects;
 
 namespace MyTrades.Tests
 {

@@ -1,6 +1,6 @@
 using System;
 
-namespace MyTrades.Domain.SharedContext.ValueObjects
+namespace MyTrades.Domain.ValueObjects
 {
     public class Name
     {

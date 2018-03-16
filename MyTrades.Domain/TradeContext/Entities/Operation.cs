@@ -3,7 +3,7 @@ using MyTrades.Domain.Enum;
 using MyTrades.Domain.ValueObjects;
 using System;
 
-namespace MyTrades.Domain.TradeContext.Entities
+namespace MyTrades.Domain.Entities
 {
     public class Operation : Notifiable
     {

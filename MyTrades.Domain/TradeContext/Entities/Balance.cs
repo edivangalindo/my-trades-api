@@ -1,6 +1,6 @@
 using System;
 
-namespace MyTrades.Domain.TradeContext.Entities
+namespace MyTrades.Domain.Entities
 {
     public class Balance
     {
