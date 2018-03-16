@@ -1,8 +1,0 @@
-C:\dev\my-trades\MyTrades.Shared\bin\Debug\netstandard2.0\MyTrades.Shared.deps.json
-C:\dev\my-trades\MyTrades.Shared\bin\Debug\netstandard2.0\MyTrades.Shared.dll
-C:\dev\my-trades\MyTrades.Shared\bin\Debug\netstandard2.0\MyTrades.Shared.pdb
-C:\dev\my-trades\MyTrades.Shared\obj\Debug\netstandard2.0\MyTrades.Shared.csproj.CoreCompileInputs.cache
-C:\dev\my-trades\MyTrades.Shared\obj\Debug\netstandard2.0\MyTrades.Shared.AssemblyInfoInputs.cache
-C:\dev\my-trades\MyTrades.Shared\obj\Debug\netstandard2.0\MyTrades.Shared.AssemblyInfo.cs
-C:\dev\my-trades\MyTrades.Shared\obj\Debug\netstandard2.0\MyTrades.Shared.dll
-C:\dev\my-trades\MyTrades.Shared\obj\Debug\netstandard2.0\MyTrades.Shared.pdb

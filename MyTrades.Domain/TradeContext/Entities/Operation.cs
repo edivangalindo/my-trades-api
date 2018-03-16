@@ -1,7 +1,6 @@
 using Flunt.Notifications;
-using Flunt.Validations;
-using MyTrades.Domain.TradeContext.Enum;
-using MyTrades.Domain.TradeContext.ValueObjects;
+using MyTrades.Domain.Enum;
+using MyTrades.Domain.ValueObjects;
 using System;
 
 namespace MyTrades.Domain.TradeContext.Entities

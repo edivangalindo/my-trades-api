@@ -1,2 +1,12 @@
 .vscode
 .vs
+MyTrades.Api/bin/
+MyTrades.Api/obj/
+MyTrades.Domain/bin/
+MyTrades.Domain/obj/
+MyTrades.Infra/bin/
+MyTrades.Infra/obj/
+MyTrades.Shared/bin/
+MyTrades.Shared/obj/
+MyTrades.Tests/bin/
+MyTrades.Tests/obj/

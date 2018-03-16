@@ -1,8 +1,0 @@
-C:\dev\my-trades\MyTrades.Infra\bin\Debug\netstandard2.0\MyTrades.Infra.deps.json
-C:\dev\my-trades\MyTrades.Infra\bin\Debug\netstandard2.0\MyTrades.Infra.dll
-C:\dev\my-trades\MyTrades.Infra\bin\Debug\netstandard2.0\MyTrades.Infra.pdb
-C:\dev\my-trades\MyTrades.Infra\obj\Debug\netstandard2.0\MyTrades.Infra.csproj.CoreCompileInputs.cache
-C:\dev\my-trades\MyTrades.Infra\obj\Debug\netstandard2.0\MyTrades.Infra.AssemblyInfoInputs.cache
-C:\dev\my-trades\MyTrades.Infra\obj\Debug\netstandard2.0\MyTrades.Infra.AssemblyInfo.cs
-C:\dev\my-trades\MyTrades.Infra\obj\Debug\netstandard2.0\MyTrades.Infra.dll
-C:\dev\my-trades\MyTrades.Infra\obj\Debug\netstandard2.0\MyTrades.Infra.pdb
