@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyTrades.Domain.Entities;
 using MyTrades.Domain.Enum;
@@ -8,57 +9,77 @@ namespace MyTrades.Tests
     [TestClass]
     public class OperationTests
     {
-        private Operation _validOperation { get; set; }
-        private Operation _invalidOperation { get; set; }
+        private Operation _operation { get; set; }
+        private Pair _pair { get; set; }
+        private Amount _amount { get; set; }
 
         public OperationTests()
         {
-            _validOperation = new Operation();
+            _operation = new Operation();
+            _pair = new Pair(EAssets.USD, EAssets.BTC);
+            _amount = new Amount(0.005m);
         }
 
         [TestMethod]
         public void Deve_Criar_Uma_Operacao_Quando_Valida()
         {
-            var pair = new Pair(EAssets.USD, EAssets.BTC);
-            var amount = new Amount(0.005m);
-
-            _validOperation.OpenOperation(
-                pair, 
-                EType.Long, 
-                25, 
-                EModality.DayTrade, 
-                amount, 
-                8500.78m, 
-                9807.80m, 
-                7500m, 
-                9300m
+            _operation.OpenOperation(
+                _pair,
+                EType.Long,
+                DateTime.Now,
+                8500m,
+                9100m,
+                9900m,
+                7900m,
+                25,
+                EModality.DayTrade,
+                _amount
             );
 
-            Assert.AreEqual(true, _validOperation.Valid);
+            Assert.AreEqual(true, _operation.Valid);
         }
 
         [TestMethod]
         public void Deve_Atribuir_Status_Open_Ao_Abrir_Uma_Operacao()
         {
-            Assert.Fail();
+            _operation.OpenOperation(
+                _pair,
+                EType.Long,
+                DateTime.Now,
+                8500m,
+                9100m,
+                9900m,
+                7900m,
+                25,
+                EModality.DayTrade,
+                _amount
+            );
+
+            Assert.AreEqual(_operation.Status, EStatus.Open);
         }
-        
+
         [TestMethod]
         public void Deve_Atribuir_Status_Canceled_Ao_Cancelar_Uma_Operacao()
         {
-            Assert.Fail();
+            _operation.CancelOperation("b15gg-456gf-s655s-65gb");
+
+            Assert.AreEqual(_operation.Status, EStatus.Canceled);
         }
 
         [TestMethod]
         public void Deve_Fechar_Uma_Operacao_Quando_Valida()
         {
-            Assert.Fail();
+            _operation.CloseOperation("b15gg-456gf-s655s-65gb", 9700m, DateTime.Now);
+
+            Assert.AreEqual(true, _operation.Valid);
         }
 
         [TestMethod]
         public void Deve_Atribuir_Status_Closed_Ao_Fechar_Uma_Operacao()
         {
-            Assert.Fail();
+            _operation.CloseOperation("b15gg-456gf-s655s-65gb", 9700m, DateTime.Now);
+
+            Assert.AreEqual(_operation.Status, EStatus.Closed);
         }
     }
 }

@@ -5,12 +5,31 @@
 
  O que uma OPERAÇÃO possui?
 
+$Interno
+
+ * Identificador = Id
+
+$Open
  * Par - Pair
  * Data Início - InitialDate
- * Data Final - FinalDate
- * Montante - Amount
  * Entrada - EntryPoint
- * Saída - ExitPoint
- * Resultado Percentual - PercentageResult
+ * Parcial - Partial
+ * Alvo - Target
+ * Stop - Stop
  * Gerenciamento de Risco - RiskManagement
- * Retorno Financeiro - FinancialFeedback
+ * Modalidade - Modality
+ * Tipo - Type
+
+$CalculadoAoAbrir
+* Montante - Amount
+
+$CalculadoAoFechar
+* Resultado Percentual - PercentageResult
+* Retorno Financeiro - FinancialFeedback
+
+$Closed
+ * Data Final - FinalDate
+ * Saída - ExitPoint
+
+ $SempreAlterado
+ * Status - Status

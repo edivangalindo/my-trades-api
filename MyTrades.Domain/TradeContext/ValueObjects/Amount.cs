@@ -21,5 +21,10 @@ namespace MyTrades.Domain.ValueObjects
         {
             // CryptoAmount X Cotação da moeda X Cotação do dólar
         }
+
+        public override string ToString()
+        {
+            return $"{CryptoAmount}";
+        }
     }
 }
