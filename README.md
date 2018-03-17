@@ -15,6 +15,7 @@ Pequeno projeto para resolver um problema do meu dia a dia e aplicar estudos.
 * Value Objects
 * Fail Fast Validations
 * Dependency Injection
+* Unit Tests
 * Mocks e Fakes
 * REST
 * Cache

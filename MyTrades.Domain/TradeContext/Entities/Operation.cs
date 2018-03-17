@@ -8,11 +8,12 @@ namespace MyTrades.Domain.Entities
 {
     public class Operation : Notifiable
     {
-        public Operation()
+        public Operation(User user)
         {
-
+            User = user;
         }
 
+        public User User { get; private set; }  
         public string IdOperation { get; private set; }
         public DateTime InitialDate { get; private set; }
         public Pair Pair { get; private set; }

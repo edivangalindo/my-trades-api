@@ -9,13 +9,23 @@ namespace MyTrades.Tests
     [TestClass]
     public class OperationTests
     {
+        private Name _name { get; set; }
+        private Email _email { get; set; }
+        private Phone _phone { get; set; }
+        private User _user { get; set; }
         private Operation _operation { get; set; }
         private Pair _pair { get; set; }
         private Amount _amount { get; set; }
 
         public OperationTests()
         {
-            _operation = new Operation();
+            _name = new Name("Edivan", "Galindo");
+            _email = new Email("edivan.galindo@gmail.com");
+            _phone = new Phone("966803654");
+
+            _user = new User(_name, _email, _phone);
+
+            _operation = new Operation(_user);
             _pair = new Pair(EAssets.USD, EAssets.BTC);
             _amount = new Amount(0.005m);
         }
