@@ -14,22 +14,15 @@ namespace MyTrades.Domain.ValueObjects
 
             AddNotifications(new Contract()
             .Requires()
-            .IsTrue(Validate(FirstName), "FirstName", "Primeiro nome inválido.")
-            .IsTrue(Validate(LastName), "LastName", "Último nome inválido.")
+                .HasMinLen(FirstName, 3, "FirstName", "O nome deve conter pelo menos 3 caractéres")
+                .HasMaxLen(FirstName, 40, "FirstName", "O nome deve conter no máximo 40 caractéres")
+                .HasMinLen(LastName, 3, "LastName", "O sobrenome deve conter pelo menos 3 caractéres")
+                .HasMaxLen(LastName, 40, "LastName", "O sobrenome deve conter no máximo 40 caractéres")
             );
         }
      
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-
-        private bool Validate (string name)
-        {
-            string pattern = @"^[A-Za-z]+[\s][A-Za-z]+[.][A-Za-z]+$";
-
-            bool validation = Regex.IsMatch(name, pattern) ? true : false;
-
-            return validation;
-        }
 
         public override string ToString()
         {

@@ -12,13 +12,13 @@ namespace MyTrades.Tests
         public NameTests()
         {
             _nameValid = new Name("Edivan", "De Barros Galindo");
-            _nameInvalid = new Name("Edivan2", "_de Barros Galindo");
+            _nameInvalid = new Name("Ed", "de Barros Galindo");
         }
 
         [TestMethod]
-        public void Deve_Retornar_Notificacoes_Nome_E_Sobrenome_Invalidos()
+        public void Deve_Retornar_Nome_Invalido()
         {
-            Assert.AreEqual(2, _nameInvalid.Notifications.Count);
+            Assert.AreEqual(true, _nameInvalid.Invalid);
         }
 
         public void Deve_Retornar_Nome_Valido()
