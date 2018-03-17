@@ -7,7 +7,7 @@ namespace MyTrades.Domain.ValueObjects
 {
     public class Phone : Notifiable
     {
-        public Phone (string number)
+        public Phone(string number)
         {
             Number = number;
 
@@ -19,6 +19,7 @@ namespace MyTrades.Domain.ValueObjects
             ));
         }
 
+        public string Number { get; set; }
         public bool Validate(string number)
         {
             string pattern = @"^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$";
@@ -27,9 +28,6 @@ namespace MyTrades.Domain.ValueObjects
 
             return validation;
         }
-        
-        public string Number { get; set; }
-
         public override string ToString()
         {
             return Number.ToString();

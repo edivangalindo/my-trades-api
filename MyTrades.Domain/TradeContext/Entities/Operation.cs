@@ -60,6 +60,7 @@ namespace MyTrades.Domain.Entities
             if (RiskManagement > 100 || RiskManagement < 0)
                 AddNotification("InvalidRisk", "O G.R. deve ser maior que 0 e menor que 100.");
         }
+
         public void CloseOperation(string idOperation, decimal exitPoint)
         {
             IdOperation = idOperation;
@@ -83,7 +84,6 @@ namespace MyTrades.Domain.Entities
                 AddNotification("InvalidExitPoint", "O ponto de saída não pode ser inferior ou igual a 0.");
         }
 
-        // Edit operation
         public void UpdateOperation(string idOperation)
         {
             IdOperation = idOperation;
@@ -91,7 +91,6 @@ namespace MyTrades.Domain.Entities
             // Recuperar operação do banco
         }
 
-        // Delete operation
         public void DeleteOperation(string idOperation)
         {
             IdOperation = idOperation;

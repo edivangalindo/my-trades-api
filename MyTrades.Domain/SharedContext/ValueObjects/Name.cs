@@ -18,8 +18,11 @@ namespace MyTrades.Domain.ValueObjects
             .IsTrue(Validate(LastName), "LastName", "Último nome inválido.")
             );
         }
+     
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
 
-        public bool Validate (string name)
+        private bool Validate (string name)
         {
             string pattern = @"^[A-Za-z]+[\s][A-Za-z]+[.][A-Za-z]+$";
 
@@ -27,9 +30,6 @@ namespace MyTrades.Domain.ValueObjects
 
             return validation;
         }
-
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
 
         public override string ToString()
         {
