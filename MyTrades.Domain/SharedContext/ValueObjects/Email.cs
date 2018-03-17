@@ -1,14 +1,16 @@
 using System;
+using Flunt.Notifications;
+using Flunt.Validations;
 
 namespace MyTrades.Domain.ValueObjects
 {
-    public class Email
+    public class Email : Notifiable
     {
         public Email (string address)
         {
             Address = address;
 
-            // Validar se o email é valido
+            AddNotifications(new Contract().Requires().IsEmail(Address, "Email", "Email inválido."));
         }
 
         public string Address { get; private set; }
