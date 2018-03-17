@@ -1,10 +1,9 @@
 using Flunt.Notifications;
-using Flunt.Validations;
-using MyTrades.Domain.Enum;
-using MyTrades.Domain.ValueObjects;
+using MyTrades.Domain.TradeContext.Enum;
+using MyTrades.Domain.TradeContext.ValueObjects;
 using System;
 
-namespace MyTrades.Domain.Entities
+namespace MyTrades.Domain.TradeContext.Entities
 {
     public class Operation : Notifiable
     {

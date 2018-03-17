@@ -1,9 +1,7 @@
-using System;
-using System.Text.RegularExpressions;
 using Flunt.Notifications;
 using Flunt.Validations;
 
-namespace MyTrades.Domain.ValueObjects
+namespace MyTrades.Domain.SharedContext.ValueObjects
 {
     public class Name : Notifiable
     {

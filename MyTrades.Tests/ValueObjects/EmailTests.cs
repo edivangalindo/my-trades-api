@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MyTrades.Domain.ValueObjects;
+using MyTrades.Domain.SharedContext.ValueObjects;
 
 namespace MyTrades.Tests
 {

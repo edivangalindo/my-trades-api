@@ -1,8 +1,7 @@
-using System;
 using Flunt.Notifications;
 using Flunt.Validations;
 
-namespace MyTrades.Domain.ValueObjects
+namespace MyTrades.Domain.SharedContext.ValueObjects
 {
     public class Email : Notifiable
     {

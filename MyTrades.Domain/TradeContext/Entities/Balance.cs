@@ -1,6 +1,4 @@
-using System;
-
-namespace MyTrades.Domain.Entities
+namespace MyTrades.Domain.TradeContext.Entities
 {
     public class Balance
     {

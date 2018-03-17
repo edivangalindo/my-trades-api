@@ -1,7 +1,4 @@
-using System;
-using MyTrades.Domain.Enum;
-
-namespace MyTrades.Domain.ValueObjects
+namespace MyTrades.Domain.TradeContext.ValueObjects
 {
     public class Amount
     {

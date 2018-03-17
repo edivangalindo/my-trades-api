@@ -1,6 +1,4 @@
-using System;
-
-namespace MyTrades.Domain.Enum
+namespace MyTrades.Domain.TradeContext.Enum
 {
     public enum EType
     {
