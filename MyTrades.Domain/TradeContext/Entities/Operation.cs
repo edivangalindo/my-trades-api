@@ -1,4 +1,5 @@
 using Flunt.Notifications;
+using Flunt.Validations;
 using MyTrades.Domain.Enum;
 using MyTrades.Domain.ValueObjects;
 using System;
@@ -9,7 +10,7 @@ namespace MyTrades.Domain.Entities
     {
         public Operation()
         {
-            InitialDate = DateTime.Now;
+            
         }
 
         public string IdOperation { get; private set; }
@@ -44,6 +45,8 @@ namespace MyTrades.Domain.Entities
             IdOperation = Guid.NewGuid().ToString();
             Status = EStatus.Open;
 
+            InitialDate = DateTime.Now;
+
             Pair = pair;
             Type = type;
             RiskManagement = riskManagement;
@@ -54,11 +57,15 @@ namespace MyTrades.Domain.Entities
             Stop = stop;
             Partial = partial;
 
-            if (Amount.CryptoAmount <= 0)
-                AddNotification("InvalidAmount", "O montante precisa ser maior que 0.");
+            var currentBalance = new Balance().GetCurrentBalance();
 
-            if (RiskManagement > 100 || RiskManagement < 0)
-                AddNotification("InvalidRisk", "O G.R. deve ser maior que 0 e menor que 100.");
+            if (Amount.CryptoAmount <= 0.00000000m)
+                AddNotification("InvalidAmount", "O montante precisa ser maior que 0.00000000 (1 satoshi)");
+            if (RiskManagement <= 0)
+                AddNotification("InvalidRisk", "O G.R. não pode ser igual ou inferior a 0% do capital.");
+            if (RiskManagement > 100)
+                AddNotification("InvalidRisk", "O G.R. não pode ser superior a 100% do capital.");
+
         }
 
         public void CloseOperation(string idOperation, decimal exitPoint)
@@ -89,6 +96,13 @@ namespace MyTrades.Domain.Entities
             IdOperation = idOperation;
 
             // Recuperar operação do banco
+        }
+
+        public void CancelOperation(string idOperation)
+        {
+            IdOperation = idOperation;
+
+            Status = EStatus.Canceled;
         }
 
         public void DeleteOperation(string idOperation)

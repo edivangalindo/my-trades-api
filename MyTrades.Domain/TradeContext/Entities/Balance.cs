@@ -17,6 +17,13 @@ namespace MyTrades.Domain.Entities
         public decimal InitialInvestment { get; private set; }
         public decimal CurrentBalance { get; private set; }
 
+        public decimal GetCurrentBalance()
+        {
+            // Recuperar o balanço no banco e atribuir ao CurrentBalance
+
+            return CurrentBalance;
+        }
+
         public void UpdateBalance(decimal amount)
         {
             bool isProfit = amount > 0 ? true : false;
