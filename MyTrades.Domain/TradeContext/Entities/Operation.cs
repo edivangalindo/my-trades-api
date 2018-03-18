@@ -24,7 +24,7 @@ namespace MyTrades.Domain.TradeContext.Entities
         public decimal Stop { get; private set; }
         public double RiskManagement { get; private set; }
         public EModality Modality { get; private set; }
-        public Amount Amount { get; private set; }
+        public Quantity Quantity { get; private set; }
         public DateTime FinalDate { get; private set; }
         public double PercentageResult { get; private set; }
         public decimal FinancialFeedback { get; private set; }
@@ -40,7 +40,7 @@ namespace MyTrades.Domain.TradeContext.Entities
             decimal stop,
             double riskManagement,
             EModality modality,
-            Amount amount
+            Quantity quantity
         )
         {
             IdOperation = Guid.NewGuid().ToString();
@@ -55,10 +55,10 @@ namespace MyTrades.Domain.TradeContext.Entities
             Stop = stop;
             RiskManagement = riskManagement;
             Modality = modality;
-            Amount = amount;
+            Quantity = quantity;
 
-            if (Amount.CryptoAmount <= 0.00000000m)
-                AddNotification("InvalidAmount", "O montante precisa ser maior que 0.00000000 (1 satoshi)");
+            if (Quantity.QuantityCrypto <= 0.00000000m)
+                AddNotification("Invalidquantity", "O montante precisa ser maior que 0.00000000 (1 satoshi)");
             if (RiskManagement <= 0)
                 AddNotification("InvalidRisk", "O G.R. não pode ser igual ou inferior a 0% do capital.");
             if (RiskManagement > 100)
@@ -80,7 +80,7 @@ namespace MyTrades.Domain.TradeContext.Entities
 
             // Recuperar informações do banco
 
-            // FinancialFeedback = CalculateFinancialFeedback(Amount.CryptoAmount);
+            // FinancialFeedback = CalculateFinancialFeedback(Quantity.Cryptoquantity);
             // PercentageResult = CalculatePercentualResult(EntryPoint, ExitPoint);
 
             // Atualizar o saldo
@@ -103,7 +103,7 @@ namespace MyTrades.Domain.TradeContext.Entities
             FinalDate = DateTime.Now;
         }
 
-        public decimal CalculateFinancialFeedback(decimal cryptoAmount) => (cryptoAmount * ExitPoint) - (cryptoAmount * EntryPoint);
+        public decimal CalculateFinancialFeedback(decimal cryptoquantity) => (cryptoquantity * ExitPoint) - (cryptoquantity * EntryPoint);
         public double CalculatePercentualResult(decimal entryPoint, decimal exitPoint) => Convert.ToDouble((exitPoint - entryPoint) / entryPoint);
     }
 }

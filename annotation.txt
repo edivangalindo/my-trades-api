@@ -21,7 +21,7 @@ $Open
  * Tipo - Type
 
 $CalculadoAoAbrir
-* Montante - Amount
+* Montante - Quantity
 
 $CalculadoAoFechar
 * Resultado Percentual - PercentageResult

@@ -16,7 +16,7 @@ namespace MyTrades.Tests.Entities
         private User _user { get; set; }
         private Operation _operation { get; set; }
         private Pair _pair { get; set; }
-        private Amount _amount { get; set; }
+        private Quantity _quantity { get; set; }
 
         public OperationTests()
         {
@@ -28,7 +28,7 @@ namespace MyTrades.Tests.Entities
 
             _operation = new Operation(_user);
             _pair = new Pair(EAssets.USD, EAssets.BTC);
-            _amount = new Amount(0.005m);
+            _quantity = new Quantity(0.005m);
         }
 
         [TestMethod]
@@ -44,7 +44,7 @@ namespace MyTrades.Tests.Entities
                 7900m,
                 25,
                 EModality.DayTrade,
-                _amount
+                _quantity
             );
 
             Assert.AreEqual(true, _operation.Valid);
@@ -63,7 +63,7 @@ namespace MyTrades.Tests.Entities
                 7900m,
                 25,
                 EModality.DayTrade,
-                _amount
+                _quantity
             );
 
             Assert.AreEqual(_operation.Status, EStatus.Open);

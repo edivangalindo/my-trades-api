@@ -22,14 +22,14 @@ namespace MyTrades.Domain.TradeContext.Entities
             return CurrentBalance;
         }
 
-        public void UpdateBalance(decimal amount)
+        public void UpdateBalance(decimal Quantity)
         {
-            bool isProfit = amount > 0 ? true : false;
+            bool isProfit = Quantity > 0 ? true : false;
             
             if (isProfit)
-                CurrentBalance += amount;
+                CurrentBalance += Quantity;
             else
-                CurrentBalance -= amount;
+                CurrentBalance -= Quantity;
         }
 
         public override string ToString()
