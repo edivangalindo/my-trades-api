@@ -5,4 +5,7 @@
   <ItemGroup>
     <PackageReference Include="Flunt" Version="1.0.2" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyTrades.Shared\MyTrades.Shared.csproj" />
+  </ItemGroup>
 </Project>
