@@ -63,7 +63,6 @@ namespace MyTrades.Domain.TradeContext.Entities
                 AddNotification("InvalidRisk", "O G.R. não pode ser igual ou inferior a 0% do capital.");
             if (RiskManagement > 100)
                 AddNotification("InvalidRisk", "O G.R. não pode ser superior a 100% do capital.");
-
         }
 
         public void CloseOperation(string idOperation, decimal exitPoint, DateTime finalDate)
